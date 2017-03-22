@@ -1,0 +1,47 @@
+<%= form_for(employee) do |f| %>
+<center>
+<div class="form-group" align="center" >
+  <center><%= f.label :name , "Nombre :" %></center>
+  <%= f.text_field :name, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :address, "Direccion :" %></center>
+  <%= f.text_field :address, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :primary_email, "Correo Primario :" %></center>
+  <%= f.text_field :primary_email, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :secondary_email, "Correo Secundario :"%> </center>
+  <%= f.text_field :secondary_email, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :birth_at, "Fecha de Nacimiento :" %></center>
+  <%= f.date_field :birth_at, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :start_at, "Fecha de Ingreso :" %></center>
+  <%= f.date_field :start_at, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :user, "Usuario :" %></center>
+  <%= f.text_field :user, class: "form-control" %>
+</div>
+
+<div class="form-group" align="center">
+  <center><%= f.label :tipo, "Tipo :" %></center>
+  <%= f.text_field :tipo, class: "form-control" %>
+</div>
+  <br>
+<div class="btn-group" role="group">
+    <%= f.submit "SAVE" ,class: "btn btn-default"%>
+    <%= link_to "CANCEL",class: "btn btn-default" %>
+</div></center>
+<%end%>

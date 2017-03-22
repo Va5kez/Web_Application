@@ -1,0 +1,2 @@
+class DepositSaving < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class DepositContribution < ApplicationRecord
+end

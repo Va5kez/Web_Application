@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date_at: 2017-03-19
+  amount: 9.99
+  balance: 9.99
+  tipo: MyString
+  periods: 1
+
+two:
+  Date_at: 2017-03-19
+  amount: 9.99
+  balance: 9.99
+  tipo: MyString
+  periods: 1
