@@ -1,3 +1,4 @@
+<h1>EMPLEADO AFILIADO</h1>
 <table border="1" class="table  table-striped">
 	<thead>
 		<tr>
@@ -9,11 +10,15 @@
       <th>Fecha_Nacimiento</th>
       <th>Fecha_Inicio</th>
       <th>Usuario</th>
-      <th>Clave</th>
       <th>Tipo</th>
+			<th>Borrar_Empleado</th>
 		</tr>
 	</thead>
 	<tbody>
 		<%= render @employee %>
 	</tbody>
 </table>
+<h1>CUENTA AHORROS</h1>
+<%= render partial: "employee_saving", locals:{account: @employee.saving} %>
+<h1>CUENTA APORTACIONES</h1>
+<%= render partial: "employee_saving", locals:{account: @employee.contribution} %>

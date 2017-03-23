@@ -4,16 +4,16 @@ class EmployeesController < ApplicationController
   end
 
   def show
-    	@employee = Employee.find(params[:id])
+    @employee = Employee.find(params[:id])
   end
 
   def create
     @employee = Employee.new(employee_params)
 
    if @employee.save
-     redirect_to employees_path, notice: "Empleado agregado con exito"
+     redirect_to employees_path, notice: "EMPLEADO AGREGADO CON EXITO"
    else
-     flash[:errors] = "No se pudo agregar al empleado"
+     flash[:errors] = "NO SE PUDO AGREGAR UN EMPLEADO"
      render :new
 end
   end
@@ -21,7 +21,7 @@ end
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
-    redirect_to employees_path, notice: "Empleado fue eliminado con exito"
+    redirect_to employees_path, notice: "EMPLEADO ELIMINADO CON EXITO"
   end
 
   def update
@@ -31,6 +31,6 @@ end
   end
   protected
   def employee_params
-    params.require(:employee).permit(:name,:address,:primary_email,:secondary_email,:birth_at,:start_at,:user,:password_digest,:tipo)
+    params.require(:employee).permit(:name,:address,:primary_email,:secondary_email,:birth_at,:start_at,:user,:password,:tipo, :password_confirmation)
   end
 end

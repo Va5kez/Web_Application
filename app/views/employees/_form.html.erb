@@ -34,11 +34,18 @@
   <center><%= f.label :user, "Usuario :" %></center>
   <%= f.text_field :user, class: "form-control" %>
 </div>
-
 <div class="form-group" align="center">
   <center><%= f.label :tipo, "Tipo :" %></center>
   <%= f.text_field :tipo, class: "form-control" %>
 </div>
+<div class="form-group" align="center">
+  <center><%= f.label :password, "Contraseña :" %></center>
+  <%= f.password_field :password, class: "form-control" %>
+</div>
+<div class="form-group" align="center">
+  <center><%= f.label :password_confirmation, "Confirmar Contraseña :" %></center>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
   <br>
 <div class="btn-group" role="group">
     <%= f.submit "SAVE" ,class: "btn btn-default"%>

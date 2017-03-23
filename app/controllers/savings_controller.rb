@@ -13,8 +13,10 @@ class SavingsController < ApplicationController
   end
 
   def show
+    @saving = Saving.find(params[:id])
   end
 
   def index
+    @savings = Saving.all
   end
 end

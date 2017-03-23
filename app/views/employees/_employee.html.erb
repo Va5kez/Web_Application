@@ -7,6 +7,6 @@
   <td><%= employee.birth_at %></td>
   <td><%= employee.start_at %></td>
   <td><%= employee.user %></td>
-  <td><%= employee.password_digest %></td>
   <td><%= employee.tipo %></td>
+  <td><%= link_to "Borrar", employee,class: "btn btn-default", method: :delete, data: {confirm: "Eliminar Empleado?"} %></td>
 </tr>
