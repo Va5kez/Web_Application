@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322021024) do
+ActiveRecord::Schema.define(version: 20170324091100) do
 
   create_table "contributions", force: :cascade do |t|
     t.string   "name"
@@ -22,19 +22,21 @@ ActiveRecord::Schema.define(version: 20170322021024) do
   end
 
   create_table "deposit_contributions", force: :cascade do |t|
-    t.date     "date_at"
     t.decimal  "amount"
     t.string   "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "contribution_id"
+    t.index ["contribution_id"], name: "index_deposit_contributions_on_contribution_id"
   end
 
   create_table "deposit_savings", force: :cascade do |t|
-    t.date     "date_at"
     t.decimal  "amount"
     t.string   "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "saving_id"
+    t.index ["saving_id"], name: "index_deposit_savings_on_saving_id"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -52,7 +54,6 @@ ActiveRecord::Schema.define(version: 20170322021024) do
   end
 
   create_table "loans", force: :cascade do |t|
-    t.date     "Date_at"
     t.decimal  "amount"
     t.decimal  "balance"
     t.string   "tipo"
@@ -62,12 +63,13 @@ ActiveRecord::Schema.define(version: 20170322021024) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.date     "date_at"
     t.decimal  "amount"
     t.decimal  "interest_paid"
     t.decimal  "capital_paid"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "loan_id"
+    t.index ["loan_id"], name: "index_payments_on_loan_id"
   end
 
   create_table "savings", force: :cascade do |t|

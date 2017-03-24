@@ -12,8 +12,10 @@ class ContributionsController < ApplicationController
   end
 
   def show
+    @contribution = Contribution.find(params[:id])
   end
 
   def index
+    @contribution = Contribution.all
   end
 end

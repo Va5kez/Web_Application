@@ -3,6 +3,7 @@ class Employee < ApplicationRecord
   after_create :create_cah
   has_one :saving
   has_one :contribution
+  has_one :loan
   has_secure_password
 
   validates_presence_of :name
