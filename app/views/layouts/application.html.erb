@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <header class="header black-bg">
+    <div class="top-menu" >
+      <ul class="nav pull-right top-menu">
+        <li>
+          <div class="btn-group">
+        		<%= link_to logout_path, data: {method: :delete}, class: "btn btn-primary btn-lg btn-block" do %>
+        			Logout
+        		<% end %>
+        	</div>
+        </li>
+      </ul>
+    </div>
+  </header>
     <%= yield %>
   </body>
 </html>

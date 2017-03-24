@@ -1,6 +1,6 @@
-<h1>Login</h1>
-<p>Por favor ingrese sus credenciales:</p>
-
+<br><br><br>
+<center><h1>Login</h1>
+<p>Porfavor Ingrese su Usuario y Contraseña:</p></center>
 
 <% if flash[:error] %>
 	<div class="alert alert-danger" role="alert">
@@ -9,17 +9,18 @@
 <% end %>
 
 <%= form_for :session, url: login_path do |f| %>
-	<div class="form-group form-inline">
-	<%= f.label :user %><span style="margin: 119px"></span>
-	<%= f.label :password %>
-	<div></div>
-		<%= f.text_field :user,:size => 30, class: "form-control", placeholder: "Usuario" %>
-		<%= f.password_field :password, class: "form-control" %>
-	</div>
-	<div class="btn-group">
-		<%= button_tag type: "submit", class: "btn btn-default" do %>
-			<span class="fa fa-sign-in"></span>
+	<center><div class="form-group form-inline">
+		<%= f.label :user, html: {class: "bold_text"} %><br>
+		<b><%= f.text_field :user,:size => 30, class: "form-control", placeholder: "Usuario" %></b>
+		<br><br>
+		<%= f.label :password %><br>
+		<b><%= f.password_field :password,:size => 30, class: "form-control", placeholder: "Contraseña" %><b>
+	</div></center>
+
+	<center><div class="btn-group">
+		<%= button_tag type: "submit", class: "btn btn-primary btn-lg btn-block" do %>
 			Login
 		<% end %>
-	</div>
+	</div></center>
+
 <% end %>

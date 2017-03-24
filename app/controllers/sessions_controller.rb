@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+skip_before_action :authenticate
+
   def new
   	if current_user
   		redirect_to employees_path

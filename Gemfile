@@ -12,6 +12,10 @@ gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
 # Trying to use ffi-sybase
 #gem 'ffi-sybase', '~> 0.0.3'
+# Use Bootstrap for design on website or Web Application
+gem 'bootstrap-sass', '~> 3.2.0'
+#Goodlooking fonts
+gem "font-awesome-rails"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
